@@ -1,0 +1,32 @@
+#include <iostream>
+#include<string>
+
+using namespace std;
+const int size = 4 ;
+string z[size * 2 ] ;
+
+void convert(string a[size] , string b[size])
+{
+    int j = 0 ;
+    for(int i=0;i<size;i++)
+    {
+        z[j] = a[i] ;
+        j++ ;
+        z[j] = b[i] ;
+        j++ ;
+    }
+}
+
+int main()
+{
+    
+    string num[size] = {"1","2","3","4"};
+    string str[size] = {"a","b","c","d"};
+    convert(str , num );
+    
+    for(int i=0;i<size * 2 ;i++)
+    {
+        cout << z[i] << " " ;
+    }
+    return 0;
+}
